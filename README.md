@@ -1,4 +1,4 @@
-#Alt-HEEANSWERS
+#HEEANSWERS
   A spiritual app that takes in your current emotion and displays a bible verse that will correspond with that emotion. Basically a app with a pocket full of sunshineto brighten your day.
   
 #Technologies Used
