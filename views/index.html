@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HeeAnswers</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="vendor/jQuery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/handlebars/handlebars.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="scripts/app.js"></script>
+  </head>
+  <body>
+  <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-2" id="left-header">
+            <h1>HeeAnswers</h1>
+            <hr>
+            <p>This is where the explanation of the app will go.
+              also the goal for this app and maybe some other gooshy stuff
+            </p>
+        </div>
+        <div class="col-sm-10" id="main-body">
+          <div class="row">
+          <h1>Today, I feel</h1><br>
+          <div class="dropdown">
+            <div class="btn-group">
+              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                Select Emotion
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                <li id="happy"> <a tabindex="-1" href="#">Happy</a></li>
+                <li id="afraid"> <a tabindex="-1" href="#">Afraid</a></li>
+                <li id="angry"> <a tabindex="-1" href="#">Angry</a></li>
+                <li id="sad"> <a tabindex="-1" href="#">Sad</a></li>
+                <li id="lost"> <a tabindex="-1" href="#">Lost</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div id='scripture-target'>
+              <script id="scripture-template" type="text/x-handlebars-template">
+                <div class="row scripture">
+                  <div class="col-md-10 col-md-offset-1">
+                    <p>"{{scripture}}"
+                  </div>
+              </div>
+            </script>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
