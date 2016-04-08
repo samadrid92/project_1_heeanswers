@@ -41,7 +41,7 @@ app.get('/admin', function adminHomepage (req, res) {
  */
 app.get('/api', controllers.api.index);
 app.get('/api/scriptures', controllers.scriptures.index);
-app.get('/api/scriptures', controllers.scriptures.show);
+app.get('/api/scriptures/:emotion', controllers.scriptures.show);
 
 /**********
  * SERVER *

@@ -13,10 +13,11 @@ function index(req, res){
 
 //GET one scripture (user)
 function show(req, res){
-  var getEmotion = req.body.emotion;
-  db.Scripture.find({emotion: getEmotion}, function getAllEmotionPassages(err, foundEmotionScriptures){
+  var getEmotion = req.params.emotion;
+  db.Scripture.find({emotion: getEmotion}, function getEmotionPassage(err, foundEmotionScripture){
     if(err){console.log(err);}
-    console.log(foundEmotionScriptures);
+    console.log(foundEmotionScripture);
+    res.send(foundEmotionScripture);
   });
 }
 

@@ -6,10 +6,33 @@ $(document).ready(function() {
   $('.emotion-selection').on('click', function(){
       var chosenEmotion = $(this).text();
       $('.button-text').text(chosenEmotion);
+    });
 
-  $('.button-text').on
+  $('.button-text').on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+      method: "GET",
+      url: "/api/scriptures",
+      success: returnedScripture,
+      error: returnedError
+    });
+
   });
+
 });
+
+function returnedScripture(viewScripture){
+  console.log(viewScripture);
+  renderScripture(viewScripture);
+}
+
+function returnedError(err){
+  console.log(err);
+}
+
+
+
+
 
 function renderScripture(data) {
   console.log('rendering scripture:', data);
