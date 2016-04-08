@@ -2,7 +2,13 @@ console.log("sanity check");
 
 $(document).ready(function() {
   console.log("app.js works");
-  
+  //event handler to change text on drop down menu
+  $('.emotion-selection').on('click', function(){
+      var chosenEmotion = $(this).text();
+      $('.button-text').text(chosenEmotion);
+
+  $('.button-text').on
+  });
 });
 
 function renderScripture(data) {

@@ -32,19 +32,18 @@
           <div class="row">
           <h1>Today, I feel</h1><br>
           <div class="dropdown">
-            <div class="btn-group">
-              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                Select Emotion
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                <li id="happy"> <a tabindex="-1" href="#">Happy</a></li>
-                <li id="afraid"> <a tabindex="-1" href="#">Afraid</a></li>
-                <li id="angry"> <a tabindex="-1" href="#">Angry</a></li>
-                <li id="sad"> <a tabindex="-1" href="#">Sad</a></li>
-                <li id="lost"> <a tabindex="-1" href="#">Lost</a></li>
-              </ul>
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+              <span class="button-text">Select Emotion</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a class="emotion-selection" href="#">Happy</a></li>
+              <li><a class="emotion-selection" href="#">Sad</a></li>
+              <li><a class="emotion-selection" href="#">Lost</a></li>
+              <li><a class="emotion-selection" href="#">Nervous</a></li>
+            </ul>
             </div>
+            <button type="button" class="btn btn-primary">Primary</button>
           </div>
         </div>
         <div class="row">
@@ -52,7 +51,7 @@
               <script id="scripture-template" type="text/x-handlebars-template">
                 <div class="row scripture">
                   <div class="col-md-10 col-md-offset-1">
-                    <p>"{{scripture}}"
+                    <p>"{{scripture}}"</p>
                   </div>
               </div>
             </script>

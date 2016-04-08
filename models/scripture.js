@@ -8,5 +8,5 @@ var scriptureSchema = new Schema({
   help_link: String
 });
 
-var Scripture = mongoose.model('Scripture', scriptureSchema);
+var Scripture = mongoose.model('Scriptures', scriptureSchema);
 module.exports = Scripture;
