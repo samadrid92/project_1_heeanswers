@@ -11,15 +11,31 @@ function index(req, res){
   });
 }
 
-//GET one scripture (user)
+//GET one emotion's scripture (user)
 function show(req, res){
-  var getEmotion = req.params.emotion;
+  var getEmotion = req.body.emotion;
   db.Scripture.find({emotion: getEmotion}, function getEmotionPassage(err, foundEmotionScripture){
     if(err){console.log(err);}
     console.log(foundEmotionScripture);
     res.send(foundEmotionScripture);
   });
 }
+
+//POST a new scripture
+function create(req, res){
+  console.log('body', req.body);
+  var newScripture = new db.Scripture({
+    scripture: req.body.scripture,
+    verse: req.body.verse,
+    emotion: req.body.emotion
+  });
+
+  
+}
+
+//Delete a scripture
+
+//PUT new info on existing scripture
 
 // export public methods here
 module.exports = {

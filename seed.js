@@ -165,6 +165,14 @@ var lostList = [
   }
 ];
 
+
+//  spits out a random scripture to display 
+// function returnedScripture(scriptures){
+//   var newRandomScripture = scriptures[Math.floor(Math.random()*scriptures.length)];
+//   console.log(newRandomScripture);
+// }
+
+
 db.Scripture.remove({}, function(err, scriptures){
 
   db.Scripture.create(happyList, function(err, happyScriptures){

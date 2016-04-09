@@ -20,22 +20,49 @@
   </head>
   <body>
     <h1>HeeAnswers Admin Page</h1>
-    <div class="container">
+    <div class="container-fluid">
+      <section id='scripture-form' class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-        </div>
-      </div>
+        <div class="col-md-12">
+          <form class="form-horizontal">
+            <fieldset>
+              <!--Create a scripture-->
+              <legend>Add a Scripture:</legend>
+              Scripture: <input id="addScripture" type="text" required="">
+              Verse: <input id="addVerse" type="text" placeholder="e.g. John 3:16" required="">
+              Emotion: <input id="addEmotion" type="text" placeholder="happy, angry, afraid, lost or sad" required="">
+              <!--Create Button-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="createbutton">Save Scripture</label>
+              <div class="col-md-4">
+                <button id="createbutton" name="createbutton" class="btn btn-primary-create">Submit</button>
+              </div>
+            </div>
+              <!--Update a scripture-->
+              <legend>Update a Scripture:</legend>
+              Scripture Id: <input id="selectScripture" type="text" required="">
+              New Scripture: <input id="updateScripture" type="text" required="">
+              New Verse: <input id="updateVerse" type="text" required="">
+              New Emotion: <input id="updateEmotion" type="text" required="">
+              <!--Update Button-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="updatebutton">Update Scripture</label>
+                <div class="col-md-4">
+                  <button id="updatebutton" name="updatebutton" class="btn btn-primary-update">Submit</button>
+                </div>
+            </div>
+              <!--Delete a scripture-->
+              <legend>Delete a Scripture:</legend>
+              Scripture Id: <input id="deleteScripture" type="text" required="">
+              <!--Delete Button-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="deletebutton">Delete Scripture</label>
+                  <div class="col-md-4">
+                    <button id="deletebutton" name="deletebutton" class="btn btn-danger-delete">Submit</button>
+                  </div>
+              </div>
+          </fieldset>
+        </form>
+
   </body>
   </html>

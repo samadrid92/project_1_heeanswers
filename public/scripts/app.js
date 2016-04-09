@@ -8,14 +8,15 @@ $(document).ready(function() {
       $('.button-text').text(chosenEmotion);
     });
 
-  $('.button-text').on('submit', function(e){
+  $('.emotion-selection').on('click', function(e){
     e.preventDefault();
     $.ajax({
       method: "GET",
-      url: "/api/scriptures",
+      url: "/api/scriptures/:emotion",
       success: returnedScripture,
       error: returnedError
     });
+
 
   });
 
