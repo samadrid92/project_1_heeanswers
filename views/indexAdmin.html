@@ -20,37 +20,44 @@
   </head>
   <body>
     <h1>HeeAnswers Admin Page</h1>
-    <div class="container-fluid">
-      <section id='scripture-form' class="container">
+    <div id="scripture-form" class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form class="form-horizontal">
+          <form  id="createScripture" class="form-horizontal">
             <fieldset>
               <!--Create a scripture-->
               <legend>Add a Scripture:</legend>
-              Scripture: <input id="addScripture" type="text" required="">
-              Verse: <input id="addVerse" type="text" placeholder="e.g. John 3:16" required="">
-              Emotion: <input id="addEmotion" type="text" placeholder="happy, angry, afraid, lost or sad" required="">
-              <!--Create Button-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="createbutton">Save Scripture</label>
-              <div class="col-md-4">
-                <button id="createbutton" name="createbutton" class="btn btn-primary-create">Submit</button>
-              </div>
-            </div>
+                Scripture: <input id="addScripture" type="text" required="">
+                Verse: <input id="addVerse" type="text" placeholder="e.g. John 3:16" required="">
+                Emotion: <input id="addEmotion" type="text" placeholder="happy, angry, afraid, lost or sad" required="">
+                <!--Create Button-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="createbutton">Save Scripture</label>
+                  <div class="col-md-4">
+                    <button id="createbutton" name="createbutton" class="btn btn-primary-create">Submit</button>
+                  </div>
+                </div>
+            </fieldset>
+          </form>
+          <form id="updateScriptureForm" class="form-horizontal">
+            <fieldset>
               <!--Update a scripture-->
               <legend>Update a Scripture:</legend>
-              Scripture Id: <input id="selectScripture" type="text" required="">
-              New Scripture: <input id="updateScripture" type="text" required="">
-              New Verse: <input id="updateVerse" type="text" required="">
-              New Emotion: <input id="updateEmotion" type="text" required="">
+                Scripture Id: <input id="selectScripture" type="text" required="">
+                New Scripture: <input id="updateScripture" type="text" required="">
+                New Verse: <input id="updateVerse" type="text" required="">
+                New Emotion: <input id="updateEmotion" type="text" required="">
               <!--Update Button-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="updatebutton">Update Scripture</label>
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="updatebutton">Update Scripture</label>
                 <div class="col-md-4">
                   <button id="updatebutton" name="updatebutton" class="btn btn-primary-update">Submit</button>
                 </div>
-            </div>
+              </div>
+            </fieldset>
+          </form>
+          <form id="deleteScriptureForm" class="form-horizontal">
+            <fieldset>
               <!--Delete a scripture-->
               <legend>Delete a Scripture:</legend>
               Scripture Id: <input id="deleteScripture" type="text" required="">
@@ -63,6 +70,22 @@
               </div>
           </fieldset>
         </form>
+    <div class="row">
+      <center><label class="col-md-12 control-label" for="returned-json">Show Response</label></center>
+        <form class="form-inline" id="showallScripturesForm">
+
+        <center><button type="submit" class="btn btn-default-showall">Show all Scriptures</button></center>
+      </form>
+        <div id='scripture-target'>
+          <script id="scripture-template" type="text/x-handlebars-template">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+              </div>
+            </div>
+          </script>
+        </div>
+    </div>
+
 
   </body>
   </html>

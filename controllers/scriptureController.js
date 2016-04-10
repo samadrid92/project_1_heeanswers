@@ -13,7 +13,7 @@ function index(req, res){
 
 //GET one emotion's scripture (user)
 function show(req, res){
-  var getEmotion = req.body.emotion;
+  var getEmotion = req.params.emotion;
   db.Scripture.find({emotion: getEmotion}, function getEmotionPassage(err, foundEmotionScripture){
     if(err){console.log(err);}
     console.log(foundEmotionScripture);
@@ -21,7 +21,7 @@ function show(req, res){
   });
 }
 
-//POST a new scripture
+// POST a new scripture
 function create(req, res){
   console.log('body', req.body);
   var newScripture = new db.Scripture({
@@ -30,7 +30,11 @@ function create(req, res){
     emotion: req.body.emotion
   });
 
-  
+  newScripture.save(function(err, scripture){
+    if(err){return console.log("save error: " + err);}
+    console.log("saved", scripture.scripture);
+    res.send(scripture);
+  });
 }
 
 //Delete a scripture
@@ -41,7 +45,7 @@ function create(req, res){
 module.exports = {
   index: index,
   show: show
-  // create: create,
-  // destroy: destroy,
-  // update: update
+//   // create: create,
+//   // destroy: destroy,
+//   // update: update
 };

@@ -10,6 +10,9 @@ $(document).ready(function() {
 
   $('.emotion-selection').on('click', function(e){
     e.preventDefault();
+    var value = $(".emotion-selection").attr("value");
+    console.log(value);
+    console.log("1st this", this);
     $.ajax({
       method: "GET",
       url: "/api/scriptures/:emotion",
@@ -24,11 +27,12 @@ $(document).ready(function() {
 
 function returnedScripture(viewScripture){
   console.log(viewScripture);
+  randomScripture(viewScripture);
   renderScripture(viewScripture);
 }
 
 function returnedError(err){
-  console.log(err);
+  alert(err);
 }
 
 
@@ -41,4 +45,9 @@ function renderScripture(data) {
   var scriptureTemplate = Handlebars.compile(scriptureHtml);
   var html = scriptureTemplate({scripture: data});
   $('#scripture-target').append(html);
+ }
+ //function to produce one random scripture
+ function randomScripture(oneRandom){
+   var oneRandomScripture = oneRandom[Math.floor(Math.random()*oneRandom.length)];
+   return oneRandom;
  }

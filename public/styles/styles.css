@@ -1,5 +1,26 @@
+body {
+  background-image: url('https://drscdn.500px.org/photo/148368913/m%3D900/a345f182831e8e3b080d6cac22cab8ae');
+  background-size: cover;
+
+
+}
+
+.col-sm-2 {
+  border-style: hidden;
+  height: 520px;
+  background-color: rgba(101, 84, 84, 0.5);
+  color: white;
+}
+
 h1 {
+  padding-top: 100px;
+  font-size: 100px;
   text-align: center;
+  color: white;
+}
+
+h3{
+  padding-right: 80px;
 }
 
 .dropdown {
@@ -7,5 +28,9 @@ h1 {
 }
 
 .dropdown-menu {
+  text-align: center;
+}
+
+ul {
   text-align: center;
 }
