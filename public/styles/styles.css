@@ -12,6 +12,10 @@ body {
   color: white;
 }
 
+col-md-10 col-md-offset-1 {
+  color: white;
+}
+
 h1 {
   padding-top: 100px;
   font-size: 100px;
