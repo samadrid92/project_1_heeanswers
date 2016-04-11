@@ -69,6 +69,7 @@ $(document).ready(function() {
 //UPDATE a scripture success and error functions
 function updateSuccessful(data){
   console.log(data);
+  renderScripture(data);
 }
 function updateError(err){
   console.log(err);
@@ -87,6 +88,7 @@ function deleteSuccessful(data){
   var deletedScriptureId = data._id;
   console.log(deletedScriptureId);
   console.log('removing scripture:', data);
+  renderScripture(data);
 }
 function deleteError(err){
   console.log(err);
