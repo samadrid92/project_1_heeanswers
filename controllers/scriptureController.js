@@ -21,7 +21,7 @@ function show(req, res){
   });
 }
 
-// POST a new scripture
+// POST a new scripture (admin)
 function create(req, res){
   console.log('body', req.body);
   var newScripture = new db.Scripture({
@@ -37,7 +37,7 @@ function create(req, res){
 }
 
 
-//Delete a scripture
+//Delete a scripture (admin)
 function destroy(req, res){
   var deleteId = req.params.emotion_id;
   console.log(deleteId);
@@ -48,7 +48,7 @@ function destroy(req, res){
   });
 }
 
-//PUT new info on existing scripture
+//PUT new info on existing scripture (admin)
 function update(req, res){
   console.log(req.body._id);
   db.Scripture.findOne({_id: req.body._id}, function(err, foundScripture){

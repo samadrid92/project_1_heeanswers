@@ -19,14 +19,21 @@ col-md-10 col-md-offset-1 {
 }
 
 h1 {
+  font-family: 'IM Fell DW Pica', serif;
   padding-top: 100px;
-  font-size: 100px;
+  font-size: 130px;
   text-align: center;
   color: white;
+  text-shadow: 3px 3px #feb751;
 }
 
 h3{
+  font-family: 'Cinzel', serif;
   padding-right: 80px;
+}
+
+p{
+  font-family: 'IM Fell DW Pica', serif;
 }
 
 .dropdown {
@@ -39,4 +46,17 @@ h3{
 
 ul {
   text-align: center;
+}
+
+.main-scripture {
+  font-family: 'IM Fell DW Pica', serif;
+  color: white;
+  font-size: 30px;
+  padding: 10px 10px 10px 0px;
+}
+
+.main-verse {
+  color: white;
+  padding-top: -20px;
+  font: 20px;
 }

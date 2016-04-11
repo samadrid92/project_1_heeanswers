@@ -230,6 +230,14 @@ var help_lostList = [
   }
 ];
 
+happyList.forEach(function (oneHappy){
+  console.log(onehappy);
+  oneHappy.help_link.push(help_happyList);
+  console.log(happyList);
+});
+
+
+
 
 
 db.Scripture.remove({}, function(err, scriptures){

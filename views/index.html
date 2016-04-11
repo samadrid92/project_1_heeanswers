@@ -17,6 +17,9 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="scripts/app.js"></script>
+    <!-- FONT LINKS -->
+    <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel:700' rel='stylesheet' type='text/css'>
   </head>
   <body>
   <div class="container-fluid">
@@ -48,9 +51,8 @@
               <script id="scripture-template" type="text/x-handlebars-template">
                 <div class="row scripture">
                   <div class="col-md-10 col-md-offset-1">
-                           "{{scripture.scripture}}"<br>
-                           --{{scripture.verse}}
-                           kbfkdbckadbckbcakbcasacjas
+                           <h3 class="main-scripture">"{{scripture.scripture}}"</h3><br>
+                           <h4 class="main-verse">{{scripture.verse}}</h4>
                   </div>
                 </div>
               </script>
