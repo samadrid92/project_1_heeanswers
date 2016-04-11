@@ -140,95 +140,95 @@ var lostList = [
   }
 ];
 
-// var help_happyList = [
-//   {
-//     title: 'pharell happy music video',
-//     help_link: 'https://youtu.be/y6Sxv-sUYtM' ,
-//     emotion: 'happy'
-//   },
-//   {
-//     title: 'baby and dogs compilation',
-//     help_link: 'https://youtu.be/ilMzs1UHEmw',
-//     emotion: 'happy'
-//   },
-//   {
-//     title: 'im happy quiz',
-//     help_link: 'http://www.brainyquote.com/quotes/keywords/i_am_happy.html',
-//     emotion: 'happy'
-//   }
-// ];
-//
-// var help_afraidList = [
-//   {
-//     title: 'shia do it video',
-//     help_link: 'https://youtu.be/cc18WsYnlfc',
-//     emotion: 'afraid'
-//   },
-//   {
-//     title: 'preacher afraid video',
-//     help_link: 'https://youtu.be/RXzfDmZIt5g',
-//     emotion: 'afraid'
-//   },
-//   {
-//     title: 'life hack afraid article',
-//     help_link: 'http://www.lifehack.org/289886/even-the-greatest-was-once-beginner-dont-afraid',
-//     emotion: 'afraid'
-//   }
-// ];
-//
-// var help_angryList = [
-//   {
-//     title: 'stonewall jackson angry video',
-//     help_link: 'https://youtu.be/Y0PvvIL-bLo?t=40s',
-//     emotion: 'angry'
-//   },
-//   {
-//     title: ,
-//     help_link: ,
-//     emotion: 'angry'
-//   },
-//   {
-//     title: ,
-//     help_link: ,
-//     emotion: 'angry'
-//   }
-// ];
-//
-// var help_sadList = [
-//   {
-//     title: ,
-//     help_link: ,
-//     emotion: 'sad'
-//   },
-//   {
-//     title: ,
-//     help_link: ,
-//     emotion: 'sad'
-//   },
-//   {
-//     title: ,
-//     help_link: ,
-//     emotion: 'sad'
-//   }
-// ];
-//
-// var help_lostList = [
-//   {
-//     title: ,
-//     help_link: ,
-//     emotion: 'lost'
-//   },
-//   {
-//     title: ,
-//     help_link: ,
-//     emotion: 'lost'
-//   },
-//   {
-//     title: ,
-//     help_link: ,
-//     emotion: 'lost'
-//   }
-// ];
+var help_happyList = [
+  {
+    title: 'pharell happy music video',
+    help_link: 'https://youtu.be/y6Sxv-sUYtM' ,
+    emotion: 'happy'
+  },
+  {
+    title: 'baby and dogs compilation',
+    help_link: 'https://youtu.be/ilMzs1UHEmw',
+    emotion: 'happy'
+  },
+  {
+    title: 'im happy quiz',
+    help_link: 'http://www.brainyquote.com/quotes/keywords/i_am_happy.html',
+    emotion: 'happy'
+  }
+];
+
+var help_afraidList = [
+  {
+    title: 'shia do it video',
+    help_link: 'https://youtu.be/cc18WsYnlfc',
+    emotion: 'afraid'
+  },
+  {
+    title: 'preacher afraid video',
+    help_link: 'https://youtu.be/RXzfDmZIt5g',
+    emotion: 'afraid'
+  },
+  {
+    title: 'life hack afraid article',
+    help_link: 'http://www.lifehack.org/289886/even-the-greatest-was-once-beginner-dont-afraid',
+    emotion: 'afraid'
+  }
+];
+
+var help_angryList = [
+  {
+    title: 'stonewall jackson angry video',
+    help_link: 'https://youtu.be/Y0PvvIL-bLo?t=40s',
+    emotion: 'angry'
+  },
+  {
+    title: '2-step process of angry',
+    help_link: 'https://www.psychologytoday.com/blog/evolution-the-self/201208/powerful-two-step-process-get-rid-unwanted-anger',
+    emotion: 'angry'
+  },
+  {
+    title: 'anger control',
+    help_link: 'http://www.apa.org/topics/anger/control.aspx',
+    emotion: 'angry'
+  }
+];
+
+var help_sadList = [
+  {
+    title: 'tips on getting happy',
+    help_link: 'https://youtu.be/S5nAdEgH0Ms',
+    emotion: 'sad'
+  },
+  {
+    title: 'buzzfeed happy video',
+    help_link: 'https://youtu.be/uMR-LKT_Yhw',
+    emotion: 'sad'
+  },
+  {
+    title: 'webmd get happy',
+    help_link: 'http://www.webmd.com/balance/guide/choosing-to-be-happy',
+    emotion: 'sad'
+  }
+];
+
+var help_lostList = [
+  {
+    title: 'ted talk find yourself',
+    help_link: 'https://youtu.be/vVsXO9brK7M',
+    emotion: 'lost'
+  },
+  {
+    title: 'find yourself video' ,
+    help_link: 'https://youtu.be/c7v4e4_Yfv4',
+    emotion: 'lost'
+  },
+  {
+    title: 'huffington post find yourself',
+    help_link: 'http://www.huffingtonpost.com/lamisha-serfwalls/7-tips-to-find-yourself-when-youre-feeling-lost_b_7514516.html',
+    emotion: 'lost'
+  }
+];
 
 
 
