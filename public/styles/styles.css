@@ -48,6 +48,10 @@ ul {
   text-align: center;
 }
 
+.button-text {
+  font-family: 'Cinzel', serif;
+}
+
 .main-scripture {
   font-family: 'IM Fell DW Pica', serif;
   color: white;
@@ -59,4 +63,5 @@ ul {
   color: white;
   padding-top: -20px;
   font: 20px;
+  font-family: 'IM Fell DW Pica', serif;
 }
