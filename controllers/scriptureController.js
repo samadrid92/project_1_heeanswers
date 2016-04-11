@@ -29,7 +29,6 @@ function create(req, res){
     verse: req.body.verse,
     emotion: req.body.emotion
   });
-
   newScripture.save(function(err, scripture){
     if(err){return console.log("save error: " + err);}
     console.log("saved", scripture.scripture);
@@ -37,15 +36,26 @@ function create(req, res){
   });
 }
 
+
 //Delete a scripture
+function destroy(req, res){
+  var deleteId = req.params.emotion_id;
+  console.log(deleteId);
+
+  db.Scripture.findOneAndRemove({_id: deleteId}, function(err, foundScripture){
+    console.log(foundScripture);
+    res.send(foundScripture);
+  });
+}
+
 
 //PUT new info on existing scripture
 
 // export public methods here
 module.exports = {
   index: index,
-  show: show
-//   // create: create,
-//   // destroy: destroy,
+  show: show,
+  create: create,
+  destroy: destroy
 //   // update: update
 };

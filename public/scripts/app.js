@@ -10,12 +10,10 @@ $(document).ready(function() {
 
   $('.emotion-selection').on('click', function(e){
     e.preventDefault();
-    var value = $(".emotion-selection").attr("value");
-    console.log(value);
-    console.log("1st this", this);
+    var value = $(this).attr("value");
     $.ajax({
       method: "GET",
-      url: "/api/scriptures/:emotion",
+      url: "/api/scriptures/" + value,
       success: returnedScripture,
       error: returnedError
     });
@@ -27,8 +25,11 @@ $(document).ready(function() {
 
 function returnedScripture(viewScripture){
   console.log(viewScripture);
-  randomScripture(viewScripture);
-  renderScripture(viewScripture);
+  var oneRandomScripture = viewScripture[Math.floor(Math.random()*viewScripture.length)];
+  console.log(oneRandomScripture);
+  renderScripture(oneRandomScripture);
+
+
 }
 
 function returnedError(err){
@@ -40,14 +41,8 @@ function returnedError(err){
 
 
 function renderScripture(data) {
-  console.log('rendering scripture:', data);
   var scriptureHtml = $('#scripture-template').html();
   var scriptureTemplate = Handlebars.compile(scriptureHtml);
   var html = scriptureTemplate({scripture: data});
   $('#scripture-target').append(html);
- }
- //function to produce one random scripture
- function randomScripture(oneRandom){
-   var oneRandomScripture = oneRandom[Math.floor(Math.random()*oneRandom.length)];
-   return oneRandom;
  }

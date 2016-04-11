@@ -68,7 +68,7 @@ var afraidList = [
 
 var angryList = [
   {
-    scripture: "Be angry, and do not sin”:[f] do not let the sun go down on your wrath, nor give place to the devil.",
+    scripture: "Be angry, and do not sin”: do not let the sun go down on your wrath, nor give place to the devil.",
     verse: "Ephesians 4:26-27",
     emotion: "angry",
     help_link: "3aaaaaa"
@@ -166,7 +166,7 @@ var lostList = [
 ];
 
 
-//  spits out a random scripture to display 
+//  spits out a random scripture to display
 // function returnedScripture(scriptures){
 //   var newRandomScripture = scriptures[Math.floor(Math.random()*scriptures.length)];
 //   console.log(newRandomScripture);

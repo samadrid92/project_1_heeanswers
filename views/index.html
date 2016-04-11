@@ -38,16 +38,18 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               <li><a class="emotion-selection" href="#" value="happy">Happy</a></li>
-              <li><a class="emotion-selection" href="#" value="sad">Sad</a></li>
+              <li><a class="emotion-selection" href="#" value="afraid">Afraid</a></li>
+              <li><a class="emotion-selection" href="#" value="angry">Angry</a></li>
               <li><a class="emotion-selection" href="#" value="lost">Lost</a></li>
-              <li><a class="emotion-selection" href="#" value="nervous">Nervous</a></li>
+              <li><a class="emotion-selection" href="#" value="sad">Sad</a></li>
             </ul>
             </div>
             <div id='scripture-target'>
               <script id="scripture-template" type="text/x-handlebars-template">
                 <div class="row scripture">
                   <div class="col-md-10 col-md-offset-1">
-                    <p>"{{scripture}}"</p>
+                           "{{scripture.scripture}}"<br>
+                           --{{scripture.verse}}
                   </div>
                 </div>
               </script>

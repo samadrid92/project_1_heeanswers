@@ -8,7 +8,7 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/stylesAdmin.css">
 
     <!-- VENDOR SCRIPTS -->
     <script src="vendor/jQuery/dist/jquery.min.js"></script>
@@ -71,15 +71,24 @@
           </fieldset>
         </form>
     <div class="row">
-      <center><label class="col-md-12 control-label" for="returned-json">Show Response</label></center>
-        <form class="form-inline" id="showallScripturesForm">
+        <form class="form-inline" id="showAllScripturesForm">
+          <center><label class="col-md-12 control-label" for="returned-json">Show Response</label></center>
 
-        <center><button type="submit" class="btn btn-default-showall">Show all Scriptures</button></center>
-      </form>
+          <center><button type="submit" class="btn btn-default-showall">Show all Scriptures</button></center>
+        </form>
         <div id='scripture-target'>
           <script id="scripture-template" type="text/x-handlebars-template">
             <div class="row">
               <div class="col-md-6 col-md-offset-3">
+                <center>Scripture:{{scripture.scripture}}<br></center>
+                <center>Verse:{{scripture.verse}}<br></center>
+                <center>Emotion:{{scripture.emotion}}<br></center>
+                <center>ID:{{scripture._id}}<br></center>
+                <!-- <center>Show All Scriptures and Id's:<br>
+                Scriptures: {{scripture.scripture}}<br>
+                Scripture ID: {{scripture._id}} </center> -->
+
+
               </div>
             </div>
           </script>
