@@ -26,7 +26,7 @@ $(document).ready(function() {
     e.preventDefault();
     console.log(this);
     var deleteId = $('#deleteScripture').val();
-    console.log('deleteId', deleteId, 'abfjhaf');
+    console.log('deleteId', deleteId);
     $.ajax({
         method: 'DELETE',
         url: '/api/scriptures/' + deleteId,
@@ -34,53 +34,70 @@ $(document).ready(function() {
         error: deleteError
     });
   });
-
-
-
-
-  $('#showAllScripturesForm').on('submit', function(e){
+  //show all scriptures on screen
+  // $('#showAllScripturesForm').on('submit', function(e){
+  //   e.preventDefault();
+  //   $.ajax({
+  //     method: "GET",
+  //     url: "/api/scriptures",
+  //     success: gotAllScriptures,
+  //     error: errorAllScriptures
+  //   });
+  // });
+  //update a scripture
+  $('#updateScriptureForm').on('submit', function(e){
     e.preventDefault();
+    console.log(this);
+    var updateId = $('#selectScripture').val();
+    console.log(updateId);
+    var newScripture = $('#updateScripture').val();
+    var newVerse = $('#updateVerse').val();
     $.ajax({
-      method: "GET",
-      url: "/api/scriptures",
-      success: gotAllScriptures,
-      error: errorAllScriptures
+      method: 'PUT',
+      url: '/api/scripture/' + updateId,
+      data: {
+        scripture: newScripture,
+        verse: newVerse
+      },
+      success: updateSuccessful,
+      error: updateError
     });
   });
 
 });
+//UPDATE a scripture success and error functions
 
+//GET all scriptures on admin page
 function gotAllScriptures(data){
   renderScripture(data);
 }
-
 function errorAllScriptures(err){
   console.log(err);
 }
 
-function newScriptureSuccess(data){
-  console.log(data);
-  renderScripture(data);
-}
-
-function newScriptureError(err){
-  alert(err);
-}
-
+//DELETE success and error functions
 function deleteSuccessful(data){
   var deletedScriptureId = data._id;
   console.log(deletedScriptureId);
   console.log('removing scripture:', data);
 }
-
 function deleteError(err){
   console.log(err);
 }
 
-function renderScripture(data) {
-  console.log('rendering scripture:', data);
-  var scriptureHtml = $('#scripture-template').html();
-  var scriptureTemplate = Handlebars.compile(scriptureHtml);
-  var html = scriptureTemplate({scripture: data});
-  $('#scripture-target').append(html);
+//CREATE succes and error functions
+ function newScriptureSuccess(data){
+   console.log(data);
+   renderScripture(data);
+ }
+ function newScriptureError(err){
+   alert(err);
+ }
+//render function
+ function renderScripture(data) {
+   console.log('rendering scripture:', data);
+   var scriptureHtml = $('#scripture-template').html();
+   var scriptureTemplate = Handlebars.compile(scriptureHtml);
+   var html = scriptureTemplate({scripture: data});
+   $('#scripture-target').append(html);
  }

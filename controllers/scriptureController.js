@@ -48,14 +48,25 @@ function destroy(req, res){
   });
 }
 
-
 //PUT new info on existing scripture
+function update(req, res){
+  console.log(req.body);
+  db.Scripture.findById(req.params.id, function(err, foundScripture){
+    if(err){console.log(err);}
+    foundScripture.scripture = req.body.scripture;
+    foundScripture.verse = req.body.verse;
+    foundScripture.save(function(err, savedScripture){
+      if(err){console.log('saved failed!');}
+      res.send(savedScripture);
+    });
+  });
+}
 
 // export public methods here
 module.exports = {
   index: index,
   show: show,
   create: create,
-  destroy: destroy
-//   // update: update
+  destroy: destroy,
+  update: update
 };
