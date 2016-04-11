@@ -1,6 +1,6 @@
 {
   "name": "project_1_heeanswers",
-  "description": "A spiritual app that takes in your current emotion and displays a bible verse that will correspond with that emotion. Basically a app with a pocket full of sunshineto brighten your day.",
+  "description": "A spiritual app that takes in your current" ,
   "main": "server.js",
   "authors": [
     "YOUR_GITHUB_USERNAME <YOUR_GITHUB_EMAIL_ADDRESS>"
@@ -17,6 +17,6 @@
   "dependencies": {
     "handlebars": "^4.0.5",
     "bootstrap": "^3.3.6",
-    "jquery": "^2.2.3"
+    "jQuery": "2.2.1"
   }
 }
