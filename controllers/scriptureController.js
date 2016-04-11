@@ -50,15 +50,16 @@ function destroy(req, res){
 
 //PUT new info on existing scripture
 function update(req, res){
-  console.log(req.body);
-  db.Scripture.findById(req.params.id, function(err, foundScripture){
+  console.log(req.body._id);
+  db.Scripture.findOne({_id: req.body._id}, function(err, foundScripture){
     if(err){console.log(err);}
+    console.log(foundScripture);
     foundScripture.scripture = req.body.scripture;
     foundScripture.verse = req.body.verse;
     foundScripture.save(function(err, savedScripture){
       if(err){console.log('saved failed!');}
-      res.send(savedScripture);
     });
+    res.send(foundScripture);
   });
 }
 

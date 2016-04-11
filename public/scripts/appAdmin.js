@@ -54,8 +54,9 @@ $(document).ready(function() {
     var newVerse = $('#updateVerse').val();
     $.ajax({
       method: 'PUT',
-      url: '/api/scripture/' + updateId,
+      url: '/api/scriptures/' + updateId,
       data: {
+        _id: updateId,
         scripture: newScripture,
         verse: newVerse
       },
@@ -66,6 +67,12 @@ $(document).ready(function() {
 
 });
 //UPDATE a scripture success and error functions
+function updateSuccessful(data){
+  console.log(data);
+}
+function updateError(err){
+  console.log(err);
+}
 
 //GET all scriptures on admin page
 function gotAllScriptures(data){
