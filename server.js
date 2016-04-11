@@ -46,6 +46,8 @@ app.post('/api/scriptures', controllers.scriptures.create);
 app.delete('/api/scriptures/:emotion_id', controllers.scriptures.destroy);
 app.put('/api/scriptures/:emotion', controllers.scriptures.update);
 
+app.get('/api/scriptures/:scriptureId/help_link', controllers.scriptures)
+
 /**********
  * SERVER *
  **********/
