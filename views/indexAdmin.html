@@ -20,7 +20,7 @@
   </head>
   <body>
     <h1>HeeAnswers Admin Page</h1>
-    <div id="scripture-form" class="container-fluid">
+    <div id="scripture-form" class="container">
       <div class="row">
         <div class="col-md-12">
           <form  id="createScripture" class="form-horizontal">
@@ -78,17 +78,17 @@
         <div id='scripture-target'>
           <script id="scripture-template" type="text/x-handlebars-template">
             <div class="row">
-              <div class="col-md-6 col-md-offset-3">
-                <center>Scripture:{{scripture.scripture}}<br></center>
-                <center>Verse:{{scripture.verse}}<br></center>
-                <center>Emotion:{{scripture.emotion}}<br></center>
-                <center>ID:{{scripture._id}}<br></center>
-                <!-- <center>Show All Scriptures and Id's:<br>
-                Scriptures: {{scripture.scripture}}<br>
-                Scripture ID: {{scripture._id}} </center> -->
-
-
+              <div class="col-sm-4">
+                Scripture:{{scripture.scripture}}<br>
+                Verse:{{scripture.verse}}<br>
+                Emotion:{{scripture.emotion}}<br>
+                ID:{{scripture._id}}<br>
               </div>
+              <div class="col-sm-8">
+                {{#each scripture.scripture}}
+
+                {{/each}}
+            </div>
             </div>
           </script>
         </div>

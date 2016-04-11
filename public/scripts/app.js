@@ -22,24 +22,18 @@ $(document).ready(function() {
   });
 
 });
-
+//GET one success and error functions
 function returnedScripture(viewScripture){
   console.log(viewScripture);
   var oneRandomScripture = viewScripture[Math.floor(Math.random()*viewScripture.length)];
   console.log(oneRandomScripture);
   renderScripture(oneRandomScripture);
-
-
 }
-
 function returnedError(err){
   alert(err);
 }
 
-
-
-
-
+//render function
 function renderScripture(data) {
   var scriptureHtml = $('#scripture-template').html();
   var scriptureTemplate = Handlebars.compile(scriptureHtml);

@@ -35,15 +35,15 @@ $(document).ready(function() {
     });
   });
   //show all scriptures on screen
-  // $('#showAllScripturesForm').on('submit', function(e){
-  //   e.preventDefault();
-  //   $.ajax({
-  //     method: "GET",
-  //     url: "/api/scriptures",
-  //     success: gotAllScriptures,
-  //     error: errorAllScriptures
-  //   });
-  // });
+  $('#showAllScripturesForm').on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+      method: "GET",
+      url: "/api/scriptures",
+      success: gotAllScriptures,
+      error: errorAllScriptures
+    });
+  });
   //update a scripture
   $('#updateScriptureForm').on('submit', function(e){
     e.preventDefault();
@@ -77,6 +77,7 @@ function updateError(err){
 
 //GET all scriptures on admin page
 function gotAllScriptures(data){
+  console.log(data);
   renderScripture(data);
 }
 function errorAllScriptures(err){
