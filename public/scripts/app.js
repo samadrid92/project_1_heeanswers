@@ -9,7 +9,7 @@ $(document).ready(function() {
     });
 
   $('.emotion-selection').on('click', function(e){
-    this.disabled = true;
+    $('#dropdownMenu1').hide();
     e.preventDefault();
     var emotion = $(this).attr("value");
     $.ajax({
