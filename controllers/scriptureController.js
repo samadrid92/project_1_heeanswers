@@ -14,7 +14,7 @@ function index(req, res){
 //GET one emotion's scripture (user)
 function show(req, res){
   var getEmotion = req.params.emotion;
-  db.Scripture.find({emotion: getEmotion}, function getEmotionPassage(err, foundEmotionScripture){
+  db.Scripture.find({emotion: getEmotion}).populate('help_index').exec(function getEmotionPassage(err, foundEmotionScripture){
     if(err){console.log(err);}
     console.log(foundEmotionScripture);
     res.send(foundEmotionScripture);

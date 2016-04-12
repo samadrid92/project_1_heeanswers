@@ -10,10 +10,10 @@ $(document).ready(function() {
 
   $('.emotion-selection').on('click', function(e){
     e.preventDefault();
-    var value = $(this).attr("value");
+    var emotion = $(this).attr("value");
     $.ajax({
       method: "GET",
-      url: "/api/scriptures/" + value,
+      url: "/api/scriptures/" + emotion,
       success: returnedScripture,
       error: returnedError
     });

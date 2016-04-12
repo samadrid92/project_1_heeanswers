@@ -9,7 +9,7 @@ body {
 
 .col-sm-2 {
   border-style: hidden;
-  height: 520px;
+  height: 600px;
   background-color: rgba(101, 84, 84, 0.5);
   color: white;
 }
@@ -29,7 +29,9 @@ h1 {
 
 h3{
   font-family: 'Cinzel', serif;
-  padding-right: 80px;
+  padding-right: 100px;
+  font-size: 21px;
+
 }
 
 p{
@@ -38,11 +40,10 @@ p{
 
 .dropdown {
   text-align: center;
+  border-style: dashed;
 }
 
-.dropdown-menu {
-  text-align: center;
-}
+
 
 ul {
   text-align: center;
