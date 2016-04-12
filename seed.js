@@ -256,11 +256,6 @@ var lostList = [
     help_link: help_lostList
   }
 ];
-
-
-
-
-
 db.Scripture.remove({}, function(err, scriptures){
 
   db.Scripture.create(happyList, function(err, happyScriptures){
@@ -293,5 +288,4 @@ db.Scripture.remove({}, function(err, scriptures){
     console.log("created", lostScriptures.length, "emotion-scriptures");
     process.exit();
   });
-
 });

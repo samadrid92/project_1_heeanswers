@@ -36,7 +36,6 @@ function create(req, res){
   });
 }
 
-
 //Delete a scripture (admin)
 function destroy(req, res){
   var deleteId = req.params.emotion_id;

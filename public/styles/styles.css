@@ -1,15 +1,11 @@
 body {
   background-image: url('https://drscdn.500px.org/photo/148472483/m%3D900/9e35275c6df5ae3fa8b3aec9c79d3f43');
   background-size: cover;
-
-
-
-
 }
 
 .col-sm-2 {
   border-style: hidden;
-  height: 595px;
+  height: 640px;
   background-color: rgba(101, 84, 84, 0.5);
   color: white;
 }
@@ -29,11 +25,9 @@ h1 {
 
 h3{
   font-family: 'Cinzel', serif;
-  padding-right: 100px;
-  font-size: 21px;
+  font-size: 28px;
   color: #bd704b;
   text-shadow: 2px 2px #5d3522;
-
 }
 
 p{
