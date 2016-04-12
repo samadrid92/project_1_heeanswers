@@ -9,6 +9,7 @@ $(document).ready(function() {
     });
 
   $('.emotion-selection').on('click', function(e){
+    this.disabled = true;
     e.preventDefault();
     var emotion = $(this).attr("value");
     $.ajax({

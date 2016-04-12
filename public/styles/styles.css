@@ -75,15 +75,20 @@ ul.dropdown-menu {
   font-family: 'IM Fell DW Pica', serif;
   color: white;
   font-size: 30px;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 0px 10px;
   text-align: center;
+  margin-bottom: 0px;
+  text-shadow: 2px 2px #5d3522;
 }
 
 .main-verse {
   color: white;
-  font-size: 23px;
+  font-size: 28px;
   font-family: 'IM Fell DW Pica', serif;
   text-align: center;
+  margin-top: 0px;
+  text-shadow: 2px 2px #5d3522;
+
 }
 
 .addResource {
@@ -91,5 +96,5 @@ ul.dropdown-menu {
   text-align: center;
   font-size: 30px;
   font-family: 'IM Fell DW Pica', serif;
-
+  text-shadow: 2px 2px #5d3522;
 }
