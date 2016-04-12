@@ -1,5 +1,5 @@
 #HEEANSWERS
-A spiritual app that takes in your current emotion and displays a bible verse that will correspond with that emotion. Basically a app with a pocket full of sunshineto brighten your day.
+A spiritual app that takes in your current emotion and displays a bible verse that will correspond with that emotion. Basically a app with a pocket full of sunshine to brighten your day.
   
 #Technologies Used
   *JQuery
@@ -43,3 +43,7 @@ A spiritual app that takes in your current emotion and displays a bible verse th
   *Add a feature that will email a user with one of his/her old entry 3,6,9,12 months later to reflect
   
   *Add social media tabs to share with the world
+  
+  *better animation when scrpiture is displayed
+  
+  *more interaction wit the user
