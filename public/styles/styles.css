@@ -31,11 +31,19 @@ h3{
   font-family: 'Cinzel', serif;
   padding-right: 100px;
   font-size: 21px;
+  color: #bd704b;
 
 }
 
 p{
   font-family: 'IM Fell DW Pica', serif;
+}
+
+p1 {
+  font-family: 'Cinzel', serif;
+  color: #fce633;
+  text-align: center;
+  font-size: 10px;
 }
 
 .dropdown {
