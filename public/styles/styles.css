@@ -9,7 +9,7 @@ body {
 
 .col-sm-2 {
   border-style: hidden;
-  height: 600px;
+  height: 590px;
   background-color: rgba(101, 84, 84, 0.5);
   color: white;
 }
@@ -32,6 +32,7 @@ h3{
   padding-right: 100px;
   font-size: 21px;
   color: #bd704b;
+  text-shadow: 2px 2px #5d3522;
 
 }
 
