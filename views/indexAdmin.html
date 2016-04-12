@@ -85,8 +85,10 @@
                 ID:{{scripture._id}}<br>
               </div>
               <div class="col-sm-8">
-                {{#each scripture.scripture}}
-
+                {{#each scripture}}
+                Scripture:{{scripture.scripture}}
+                Verse:{{scripture.verse}}
+                ID:{{scripture._id}}
                 {{/each}}
             </div>
             </div>
