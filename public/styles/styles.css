@@ -40,13 +40,18 @@ p{
 
 .dropdown {
   text-align: center;
-  border-style: dashed;
+
 }
 
-
-
-ul {
+ul.dropdown-menu {
+  left: 33vw;
+  width: 168px;
   text-align: center;
+
+}
+
+.emotion-selection {
+  font-family: 'Cinzel', serif;
 }
 
 .button-text {
