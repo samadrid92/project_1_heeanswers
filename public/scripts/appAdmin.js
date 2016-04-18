@@ -1,5 +1,6 @@
 console.log("sanity check");
 
+/* TODO: To make this page more user-friendly, consider adding buttons to update/delete next to each existing scripture instead of requiring a user to enter the id. -jc */
 $(document).ready(function() {
   console.log("app.js works");
   //saves a new scripture to database
@@ -12,6 +13,7 @@ $(document).ready(function() {
     $.ajax({
       method: "POST",
       url: "/api/scriptures",
+      /* TODO: create an object to pass to the data field OUTSIDE of the ajax call -jc */
       data: {
         scripture: newScripture,
         verse: newVerse,
@@ -78,6 +80,7 @@ function updateError(err){
 //GET all scriptures on admin page
 function gotAllScriptures(data){
   console.log(data);
+  /* TODO: If you set your renderScripture to only handle single scripture objects, then this call will send an array of scripture objects.  Use a forEach loop to execute a renderScripture on each object in the data array.-jc */
   renderScripture(data);
 }
 function errorAllScriptures(err){
@@ -104,6 +107,7 @@ function deleteError(err){
    alert(err);
  }
 //render function
+ /* TODO: based on how you call your renderScripture, it appears to render ONE scripture at a time. Change the handlebars script to only handle one scripture object (not one and also an array, that'll make your page puke). -jc */
  function renderScripture(data) {
    console.log('rendering scripture:', data);
    var scriptureHtml = $('#scripture-template').html();

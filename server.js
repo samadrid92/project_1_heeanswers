@@ -38,6 +38,13 @@ app.get('/admin', function adminHomepage (req, res) {
  */
 app.get('/api', controllers.api.index);
 app.get('/api/scriptures', controllers.scriptures.index);
+/* TODO: consider creating a query section to your index where instead of having a route below with the :emotion parameter.  One possible example would be :
+
+  api/scriptures/:emotion (not so good)
+  api/scriptures?emotion=sad (better)
+  api/scriptures/:scriptureId (better)
+
+this allows you to access specific scriptures instead of constantly pulling ALL of the scriptures. */
 app.get('/api/scriptures/:emotion', controllers.scriptures.show);
 app.post('/api/scriptures', controllers.scriptures.create);
 app.delete('/api/scriptures/:emotion_id', controllers.scriptures.destroy);
