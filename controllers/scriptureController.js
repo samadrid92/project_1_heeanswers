@@ -7,6 +7,7 @@ function index(req, res){
       console.log(err);
     }
     console.log(allScriptures);
+    /* TODO: generally we will want to send a response in the form of json, specifcally: res.json() -jc */
     res.send(allScriptures);
   });
 }
@@ -17,6 +18,7 @@ function show(req, res){
   db.Scripture.find({emotion: getEmotion}).populate('help_index').exec(function getEmotionPassage(err, foundEmotionScripture){
     if(err){console.log(err);}
     console.log(foundEmotionScripture);
+    /* TODO: generally we will want to send a response in the form of json, specifcally: res.json() -jc */
     res.send(foundEmotionScripture);
   });
 }
@@ -32,6 +34,7 @@ function create(req, res){
   newScripture.save(function(err, scripture){
     if(err){return console.log("save error: " + err);}
     console.log("saved", scripture.scripture);
+    /* TODO: generally we will want to send a response in the form of json, specifcally: res.json() -jc */
     res.send(scripture);
   });
 }
@@ -43,6 +46,7 @@ function destroy(req, res){
 
   db.Scripture.findOneAndRemove({_id: deleteId}, function(err, foundScripture){
     console.log(foundScripture);
+    /* TODO: generally we will want to send a response in the form of json, specifcally: res.json() -jc */
     res.send(foundScripture);
   });
 }
@@ -58,6 +62,7 @@ function update(req, res){
     foundScripture.save(function(err, savedScripture){
       if(err){console.log('saved failed!');}
     });
+    /* TODO: generally we will want to send a response in the form of json, specifcally: res.json() -jc */
     res.send(foundScripture);
   });
 }
